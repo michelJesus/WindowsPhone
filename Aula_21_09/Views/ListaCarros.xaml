@@ -1,0 +1,34 @@
+﻿<Page
+    x:Class="Aula_21_09.Views.ListaCarros"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Aula_21_09.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <ListView Name="ltwCarros" FontSize="30" Height="350"
+                  IsItemClickEnabled="True"
+                  ItemClick="ltwCarros_ItemClick">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock 
+                        Name="tbkID" 
+                        Text="{Binding CarroID}" 
+                        FontSize="25" />
+                        <TextBlock
+                        Name="tbkModelo"
+                        Text="{Binding Modelo}"
+                        FontSize="25" />
+                        <TextBlock Name="tbkAno"
+                               Text="{Binding Ano}"
+                               FontSize="25" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Page>

@@ -1,0 +1,26 @@
+﻿<Page
+    x:Class="Aula_21_09.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Aula_21_09"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <StackPanel>
+            <TextBlock 
+                Name="tbkIdInserido" 
+                FontSize="30" />
+            
+            <Button Name="btnAdicionar" 
+                    Content="Adicionar Carro" 
+                    Click="btnAdicionar_Click" />
+            
+            <Button Name="btnExibirLista"
+                    Content="Navegar para lista"
+                    Click="btnExibirLista_Click" />
+        </StackPanel>
+    </Grid>
+</Page>

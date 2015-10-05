@@ -1,0 +1,44 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ReceitasApp.Views.IngredienteReceitaViews"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Models="using:ReceitasApp.Models"
+    x:Class="ReceitasApp.Views.IngredienteReceitaViews.Cadastro"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="15">
+            <TextBlock Text="Receitas App" Style="{StaticResource BaseTextBlockStyle}" />
+            <TextBlock Text="Ingrediente Receita" 
+                       Style="{StaticResource HeaderTextBlockStyle}"
+                       TextWrapping="WrapWholeWords"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Margin="15">
+            <TextBox x:Name="txtNome" PlaceholderText="Quantidade" 
+				InputScope="Number"/>
+            <ComboBox x:Name="cmbIngrediente"
+                      DisplayMemberPath="Nome"
+                      SelectedValuePath="IngredienteID">
+            </ComboBox>
+
+            <ComboBox Name="cmbUnidadeMedida"
+                      DisplayMemberPath="Nome"
+                      SelectedValuePath="UnidadeMedidaID"/>
+
+            <ComboBox Name="cmbReceita"
+                      DisplayMemberPath="Titulo"
+                      SelectedValuePath="ReceitaID"/>
+
+            <Button x:Name="btnSalvar" Content="Salvar" 
+				Click="btnSalvar_Click" HorizontalAlignment="Stretch" />
+        </StackPanel>
+    </Grid>
+</Page>

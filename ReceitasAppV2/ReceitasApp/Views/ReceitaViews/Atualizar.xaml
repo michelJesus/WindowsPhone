@@ -1,0 +1,52 @@
+﻿<Page
+    x:Class="ReceitasApp.Views.ReceitaViews.Atualizar"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ReceitasApp.Views.ReceitaViews"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="15">
+            <TextBlock Text="Receitas App" Style="{StaticResource BaseTextBlockStyle}" />
+            <TextBlock Text="Receita" Style="{StaticResource HeaderTextBlockStyle}" />
+        </StackPanel>
+        <StackPanel Grid.Row="1" Margin="15">
+            <TextBox Name="txtTitulo" PlaceholderText="Título" />
+            <TextBox Name="txtTempoPreparo" PlaceholderText="Tempo de preparo" InputScope="Number"/>
+            <TextBox Name="txtModoPrepar" PlaceholderText="Modo de preparo" />
+            <TextBox Name="txtPorcoes" PlaceholderText="Porções" InputScope="Number"/>
+            <TextBox Name="txtObservacao" PlaceholderText="Observações"/>
+            <Button Name="btnSalvar" Content="Salvar" Click="btnSalvar_Click" HorizontalAlignment="Stretch" />
+        
+
+        <ListView Name="lvReceita" FontSize="30" Margin="15"
+                  Tapped="lvReceita_Tapped">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+
+                        <TextBlock 
+                        Name="tbkID" 
+                        Text="{Binding ReceitaID}" 
+                        FontSize="25" />
+                        <TextBlock Text=" - " />
+                        <TextBlock
+                        Name="tbkModelo"
+                        Text="{Binding Titulo}"
+                        FontSize="25" />
+
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        </StackPanel>
+    </Grid>
+</Page>

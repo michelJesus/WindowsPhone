@@ -1,0 +1,78 @@
+﻿<Page
+    x:Class="App1.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        
+        <StackPanel>
+            <CheckBox Name="chxAceito" Content="Aceitar" />
+            <TextBlock Name="tbkAceito" TextWrapping="Wrap" FontSize="25" />
+            <Button Name="btnObterCheck" Content="Obter Check" Click="btnObterCheck_Click" />
+        </StackPanel>
+        
+        <StackPanel Grid.Column="1" >
+            <RadioButton Name="rbnRadio1" Content="Opção 1" />
+            <RadioButton Name="rbnRadio2" Content="Opção 2" />
+            <RadioButton Name="rbnRadio3" Content="Opção 3" />
+            <RadioButton Name="rbnRadio4" Content="Opção 4" />
+            <TextBlock Name="tbkRadio" FontSize="25" />
+            <Button Name="btnRadio" Content="Obter Radio" Click="btnRadio_Click" />
+        </StackPanel>
+        
+        
+        <StackPanel Grid.Row="1">
+            <DatePicker Name="dprData" />
+            <TextBlock Name="tbkData" FontSize="25" TextWrapping="Wrap" />
+            <Button Name="btnObterData" Content="Obter Data" Click="btnObterData_Click" />
+            <TimePicker />
+        </StackPanel>
+        
+        
+        <StackPanel Grid.Row="1" Grid.Column="1">
+            <Slider Name="slrValor" Maximum="10" Minimum="1" />
+            <TextBlock Name="tbkSlider" FontSize="25" />
+            <Button Name="btnObterValorSlider" Content="Obter Slider" Click="btnObterValorSlider_Click" />
+        </StackPanel>
+        
+        <StackPanel Grid.Row="2">
+            <ProgressRing Name="prgRing" />
+            <ProgressBar Name="progBar" />
+            <ToggleButton Name="tbnProgBar" Content="ToggleButton" Click="tbnProgBar_Click" />    
+        </StackPanel>
+        
+        <StackPanel Grid.Row="2" Grid.Column="1">
+            <ComboBox  Name="cbxNomes">
+                <ComboBoxItem Content="Godofredo" />
+                <ComboBoxItem Content="João" />
+                <ComboBoxItem Content="Paulo" />
+                <ComboBoxItem Content="Paulo" />
+                <ComboBoxItem Content="Paulo" />
+                <ComboBoxItem Content="Paulo" />
+                <ComboBoxItem Content="Maria" />
+            </ComboBox>
+            
+            <TextBlock Name="tbkNomes" />
+            <Button Name="btnObterNome" Content="Obter Nome" Click="btnObterNome_Click" />
+            
+        </StackPanel>
+
+    </Grid>
+</Page>

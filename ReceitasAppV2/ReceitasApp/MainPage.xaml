@@ -1,0 +1,56 @@
+﻿<Page
+    x:Class="ReceitasApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ReceitasApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <ScrollViewer>
+            <StackPanel Grid.Row="0">
+                <TextBlock Text="Cadastros Essenciais" FontSize="20" />
+
+                <Button Grid.Row="0" Margin="15"
+            Name="btnUnidadeMedida" 
+            Click="btnUnidadeMedida_Click"
+            Content="Unidade Medida"
+            HorizontalAlignment="Stretch"/>
+
+                <Button Grid.Row="0" Margin="15"
+            Name="btnIngrediente" 
+            Click="btnIngrediente_Click"
+            Content="Ingrediente"
+            HorizontalAlignment="Stretch"/>
+
+                <Button Grid.Row="0" Margin="15"
+            Name="btnIngredienteReceita" 
+            Click="btnIngredienteReceita_Click"
+            Content="Ingrediente Receita"
+            HorizontalAlignment="Stretch"/>
+
+
+            <Button Grid.Row="0" Margin="15"
+            Name="btnReceita" 
+            Click="btnReceita_Click"
+            Content="Receita"
+            HorizontalAlignment="Stretch"/>
+            </StackPanel>
+        </ScrollViewer>
+
+
+        <!--<Button Grid.Row="1" Name="btnExibirListaUnidadeMedida"
+            Content="Navegar para lista"
+            Click="btnExibirLista_Click"
+            HorizontalAlignment="Stretch"/>-->
+    </Grid>
+</Page>
